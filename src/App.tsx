@@ -1,4 +1,3 @@
-import './App.css'
 import logo from './assets/weather_icon.png'
 
 function App() {
