@@ -1,4 +1,5 @@
 import './App.css'
+import logo from './assets/weather_icon.png'
 
 function App() {
 
@@ -6,7 +7,7 @@ function App() {
     <>
       <div>
         <h1>Current Weather</h1>
-        <img src="src/assets/weather_icon.png" alt="" />
+        <img src={logo} alt="" />
        </div>
     </>
   )
