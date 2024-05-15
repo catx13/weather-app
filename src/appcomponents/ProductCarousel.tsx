@@ -12,7 +12,7 @@ import {
 
 export function ProductCarousel() {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: true ,jump:false})
   )
 
   return (

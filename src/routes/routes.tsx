@@ -1,3 +1,4 @@
+import HomeLayout from "@/layouts/HomeLayout";
 import CreateAccountPage from "@/pages/CreateAccount";
 import { Dashboard } from "@/pages/Dashboard";
 import Home from "@/pages/Home";
@@ -7,19 +8,24 @@ import { createBrowserRouter } from "react-router-dom";
 export const routes = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-
+    element: <HomeLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
+    ],
   },
   {
-    path:'/signUp',
-    element:<CreateAccountPage/>
+    path: "/signUp",
+    element: <CreateAccountPage />,
   },
-  {
-    path:'/profile',
-    element:<Profile/>
-  },
-  {
-    path:'/dashboard',
-    element:<Dashboard/>
-  }
 ]);
