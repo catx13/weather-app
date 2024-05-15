@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
 import { Sun, Moon } from "lucide-react";
 import { Theme } from "@/globals/datatypes";
+import { LoginButton } from "./LoginButton";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -68,7 +69,7 @@ export function NavigationMenuDemo() {
     setTheme(currentTheme);
   };
   React.useEffect(() => {
-    // setCurrentTheme(localStorage.getItem("vite-ui-theme") as Theme);
+    setCurrentTheme(localStorage.getItem("vite-ui-theme") as Theme);
   }, []);
   return (
     <NavigationMenu className='p-1' style={{ maxWidth: "100%" }}>
@@ -137,7 +138,8 @@ export function NavigationMenuDemo() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Button>Login</Button>
+            {/* <Button>Login</Button> */}
+            <LoginButton/>
           </NavigationMenuItem>
         </NavigationMenuList>
       </div>

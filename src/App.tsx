@@ -7,7 +7,7 @@ function App() {
     <>
       <div className='bg-background text-foreground'>
         <h1> Weather App </h1>
-        <img src={logo} alt="" />
+        <img src={logo} alt="logo" />
         <Button>Login</Button>
        </div>
     </>
