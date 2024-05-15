@@ -70,6 +70,7 @@ export function NavigationMenuDemo() {
   };
   React.useEffect(() => {
     setCurrentTheme(localStorage.getItem("vite-ui-theme") as Theme);
+    console.log(currentTheme,"effect")
   }, []);
   return (
     <NavigationMenu className='p-1' style={{ maxWidth: "100%" }}>
@@ -130,13 +131,12 @@ export function NavigationMenuDemo() {
           <NavigationMenuItem>
             <Button onClick={handleThemeSwitch}>
               {currentTheme === "dark" ? (
-                <Sun className='' />
-              ) : (
                 <Moon className='' />
+              ) : (
+                <Sun className='' />
               )}
             </Button>
           </NavigationMenuItem>
-
           <NavigationMenuItem>
             {/* <Button>Login</Button> */}
             <LoginButton/>
