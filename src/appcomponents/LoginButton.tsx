@@ -24,10 +24,12 @@ import {
 } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Link } from "react-router-dom";
 
 export function LoginButton() {
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
+  const SignUpButton = <Link to={"/signUp"}> Sign Up</Link>;
 
   if (isDesktop) {
     return (
@@ -41,9 +43,9 @@ export function LoginButton() {
             <DialogDescription>Login to your profile here.</DialogDescription>
           </DialogHeader>
           <ProfileForm />
-          <DialogFooter className='flex justify-start '>
+          <DialogFooter className='flex '>
             <div>{"Do not have an account ?"}</div>
-            <Button variant={"link"}> Sign Up</Button>
+            <div>{SignUpButton}</div>
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -66,7 +68,7 @@ export function LoginButton() {
             <Button variant='outline'>Cancel</Button>
           </DrawerClose>
           <div>{"Do not have an account ?"}</div>
-          <Button variant={"link"}> Sign Up</Button>
+          {SignUpButton}
         </DrawerFooter>
       </DrawerContent>
     </Drawer>

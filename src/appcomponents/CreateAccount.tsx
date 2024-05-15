@@ -1,7 +1,6 @@
 "use client"
 
-import { Icons } from "@/components/icons"
-import { Button } from "@/registry/new-york/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -9,13 +8,18 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/registry/new-york/ui/card"
-import { Input } from "@/registry/new-york/ui/input"
-import { Label } from "@/registry/new-york/ui/label"
+} from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { ArrowBigLeft, GoalIcon } from "lucide-react"
+import { Link } from "react-router-dom"
 
 export function DemoCreateAccount() {
   return (
-    <Card>
+   <div className="p-4 flex justify-center items-center content-center h-svh w-full">
+    <div>
+    <Link to={'/'}  ><Button className="mb-2 pl-2 pr-4" > <ArrowBigLeft  className="mr-2"/> Back</Button></Link>
+     <Card className=" max-w-sm p-4">
       <CardHeader className="space-y-1">
         <CardTitle className="text-2xl">Create an account</CardTitle>
         <CardDescription>
@@ -25,11 +29,11 @@ export function DemoCreateAccount() {
       <CardContent className="grid gap-4">
         <div className="grid grid-cols-2 gap-6">
           <Button variant="outline">
-            <Icons.gitHub className="mr-2 h-4 w-4" />
+          {/* <FontAwesomeIcon icon={icon({name: 'user-secret'})} />  */}
             Github
           </Button>
           <Button variant="outline">
-            <Icons.google className="mr-2 h-4 w-4" />
+            <GoalIcon/>
             Google
           </Button>
         </div>
@@ -56,5 +60,7 @@ export function DemoCreateAccount() {
         <Button className="w-full">Create account</Button>
       </CardFooter>
     </Card>
+    </div>
+   </div>
   )
 }

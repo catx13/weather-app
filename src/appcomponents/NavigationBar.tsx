@@ -137,7 +137,6 @@ export function NavigationMenuDemo() {
             </Button>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            {/* <Button>Login</Button> */}
             <LoginButton/>
           </NavigationMenuItem>
         </NavigationMenuList>
