@@ -1,7 +1,8 @@
 import DashboardLayout from "@/layouts/DashboardLayout";
 import HomeLayout from "@/layouts/HomeLayout";
 import CreateAccountPage from "@/pages/CreateAccount";
-import { Dashboard } from "@/pages/Dashboard";
+import {  Orders } from "@/pages/dashboard/Orders";
+import { Products } from "@/pages/dashboard/Products";
 import Home from "@/pages/Home";
 import Profile from "@/pages/Profile";
 import { createBrowserRouter } from "react-router-dom";
@@ -27,12 +28,12 @@ export const routes = createBrowserRouter([
     element: <DashboardLayout />,
     children:[
         {
-            path: "/dashboard/",
-            element: <Dashboard />,
+            path: "/dashboard/orders",
+            element: <Orders />,
           },
           {
             path: "/dashboard/products",
-            element: <>Products</>,
+            element: <Products/>,
           },
     
     ]

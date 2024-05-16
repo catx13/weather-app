@@ -6,7 +6,7 @@ function Home() {
     <>
       <div className=''>
         <h1 className='scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl p-4 pl-16'>
-          Book Club
+          
         </h1>
       </div>
       <ProductCarousel />

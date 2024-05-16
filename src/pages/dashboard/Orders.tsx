@@ -78,7 +78,7 @@ import {
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import ThemeSwitchButton from "@/appcomponents/ThemeSwitchButton";
 
-export function Dashboard() {
+export function Orders() {
   return (
     <TooltipProvider>
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
