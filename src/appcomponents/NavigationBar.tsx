@@ -17,6 +17,7 @@ import { Sun, Moon } from "lucide-react";
 import { Theme } from "@/globals/datatypes";
 import { LoginButton } from "./LoginButton";
 import { Link } from "react-router-dom";
+import ThemeSwitchButton from "./ThemeSwitchButton";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -57,21 +58,7 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function NavigationMenuDemo() {
-  const { setTheme } = useTheme();
-  const [currentTheme, setCurrentTheme] = React.useState<Theme>("system");
-  const handleThemeSwitch = () => {
-    console.log(currentTheme, "curr");
-    console.log(localStorage.getItem("vite-ui-theme"), "ls");
-    currentTheme === "dark"
-      ? setCurrentTheme("light")
-      : setCurrentTheme("dark");
-    console.log(currentTheme, "curr");
-    setTheme(currentTheme);
-  };
-  React.useEffect(() => {
-    setCurrentTheme(localStorage.getItem("vite-ui-theme") as Theme);
-    console.log(currentTheme, "effect");
-  }, []);
+  
   return (
     <NavigationMenu className='p-1 pl-16 fixed top-0 left-0 right-0 bg-background' style={{ maxWidth: "100%" }}>
       <div className='flex justify-between ' style={{ width: "100%" }}>
@@ -128,19 +115,13 @@ export function NavigationMenuDemo() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link to={"/dashboard"}>
-              <Button>Dashboard</Button>
+              <Button variant={"ghost"}>Dashboard</Button>
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Button variant={"link"} onClick={handleThemeSwitch}>
-              {currentTheme === "dark" ? (
-                <Moon className='' />
-              ) : (
-                <Sun className='' />
-              )}
-            </Button>
+           <ThemeSwitchButton/>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <LoginButton />

@@ -1,3 +1,4 @@
+import DashboardLayout from "@/layouts/DashboardLayout";
 import HomeLayout from "@/layouts/HomeLayout";
 import CreateAccountPage from "@/pages/CreateAccount";
 import { Dashboard } from "@/pages/Dashboard";
@@ -14,15 +15,27 @@ export const routes = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {
-        path: "/dashboard",
-        element: <Dashboard />,
-      },
+      
       {
         path: "/profile",
         element: <Profile />,
       },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children:[
+        {
+            path: "/dashboard/",
+            element: <Dashboard />,
+          },
+          {
+            path: "/dashboard/products",
+            element: <>Products</>,
+          },
+    
+    ]
   },
   {
     path: "/signUp",

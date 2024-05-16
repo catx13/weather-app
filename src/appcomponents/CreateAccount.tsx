@@ -29,11 +29,9 @@ export function DemoCreateAccount() {
       <CardContent className="grid gap-4">
         <div className="grid grid-cols-2 gap-6">
           <Button variant="outline">
-          {/* <FontAwesomeIcon icon={icon({name: 'user-secret'})} />  */}
             Github
           </Button>
           <Button variant="outline">
-            <GoalIcon/>
             Google
           </Button>
         </div>
