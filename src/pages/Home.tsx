@@ -11,7 +11,6 @@ function Home() {
       </div>
       <ProductCarousel />
       <div className='p-16'>
-        <DemoNotifications />
       </div>
     </>
   );
