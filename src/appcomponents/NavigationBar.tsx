@@ -114,7 +114,7 @@ export function NavigationMenuDemo() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link to={"/dashboard/orders"}>
+            <Link to={"/dashboard/"}>
               <Button variant={"ghost"}>Dashboard</Button>
             </Link>
           </NavigationMenuItem>

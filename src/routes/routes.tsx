@@ -1,9 +1,11 @@
 import DashboardLayout from "@/layouts/DashboardLayout";
 import HomeLayout from "@/layouts/HomeLayout";
 import CreateAccountPage from "@/pages/CreateAccount";
+import DashboardPage from "@/pages/dashboard/Dashboard";
 import {  Orders } from "@/pages/dashboard/Orders";
 import { Products } from "@/pages/dashboard/Products";
 import Home from "@/pages/Home";
+import { Login } from "@/pages/Login";
 import Profile from "@/pages/Profile";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -28,6 +30,10 @@ export const routes = createBrowserRouter([
     element: <DashboardLayout />,
     children:[
         {
+            path: "/dashboard/",
+            element: <DashboardPage />,
+          },
+        {
             path: "/dashboard/orders",
             element: <Orders />,
           },
@@ -41,5 +47,9 @@ export const routes = createBrowserRouter([
   {
     path: "/signUp",
     element: <CreateAccountPage />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);

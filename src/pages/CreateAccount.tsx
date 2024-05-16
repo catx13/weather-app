@@ -1,7 +1,7 @@
-import { DemoCreateAccount } from '@/appcomponents/CreateAccount'
+import { CreateAccount } from '@/appcomponents/CreateAccount'
 
 export default function CreateAccountPage() {
   return (
-    <div><DemoCreateAccount/></div>
+    <div><CreateAccount/></div>
   )
 }
